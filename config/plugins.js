@@ -1,36 +1,28 @@
 
+module.exports = ({ env }) => ({
+    
+    email: {
+      config: {
+        provider: 'sendgrid',
+        providerOptions: {
+          apiKey: env('SENDGRID_API_KEY'),
+        },
+        settings: {
+          defaultFrom: 'ipangram.devs@gmail.com',
+          defaultReplyTo: 'ipangram.devs@gmail.com',
+        },
+      },
+    },
 
-// module.exports = ({ env }) => ({
-//     // enable a plugin that doesn't require any configuration
-//     i18n: true,
-  
-//     // enable a custom plugin
-//     myplugin: {
-//       // my-plugin is going to be the internal name used for this plugin
-//       enabled: true,
-//       resolve: './src/plugins/my-local-plugin',
-//       config: {
-//         // user plugin config goes here
-//       },
-//     },
-  
-//     // disable a plugin
-//     myotherplugin: {
-//       enabled: false, // plugin installed but disabled
-//     },
-//   });
-
-
-// module.exports = () => ({
-//     graphql: {
-//       enabled: true,
-//       config: {
-//         playgroundAlways: false,
-//         defaultLimit: 10,
-//         maxLimit: 20,
-//         apolloServer: {
-//           tracing: true,
-//         },
-//       }
-//     }
-//   })
+        upload: {
+          provider: 'aws-s3',
+          providerOptions: {
+            accessKeyId: env('ACCESS_KEY_ID'),
+            secretAccessKey: env('SECRET_ACCESS_KEY'),
+            region: env('REGION'),
+            params: {
+              Bucket: env('PHOTOGALLARY'),
+            },
+          },
+        },
+  });
