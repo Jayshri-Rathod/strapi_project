@@ -2,7 +2,6 @@
 module.exports = {
     async afterCreate(event){
         const {result}= event;
-
         try{
             // const data = await strapi.service("api::client.client").find();
             // // console.log(clients, "client")
@@ -22,3 +21,7 @@ module.exports = {
         }
     }
 }
+
+
+
+
