@@ -1,4 +1,6 @@
 
+
+
 module.exports = ({ env }) => ({
     
     email: {
@@ -24,5 +26,8 @@ module.exports = ({ env }) => ({
               Bucket: env('PHOTOGALLARY'),
             },
           },
+        },
+        'import-export-entries': {
+          enabled: true
         },
   });

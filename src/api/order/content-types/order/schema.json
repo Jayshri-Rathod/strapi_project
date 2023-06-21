@@ -12,12 +12,11 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "stripeid": {
-      "type": "uid",
-      "required": true
-    },
     "products": {
       "type": "json"
+    },
+    "stripeid": {
+      "type": "string"
     }
   }
 }

@@ -10,7 +10,11 @@
     "draftAndPublish": true,
     "populateCreatorFields": true
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "import-export-entries": {
+      "idField": "Name"
+    }
+  },
   "attributes": {
     "Name": {
       "type": "string",
