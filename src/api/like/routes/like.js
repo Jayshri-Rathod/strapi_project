@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * car router
+ * like router
  */
 
 const { createCoreRouter } = require('@strapi/strapi').factories;
 
-module.exports = createCoreRouter('api::car.car');
+module.exports = createCoreRouter('api::like.like');

@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * car controller
+ * like controller
  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::car.car');
+module.exports = createCoreController('api::like.like');
